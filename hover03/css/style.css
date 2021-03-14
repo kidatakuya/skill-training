@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    background-color: black;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+    width: 70%;
+    height: 50px;
+   
+}
+ul{
+    height: 100%;
+    display: flex;
+    padding: 0;
+}
+.manu{
+    width: 20%;
+    color: #FFF;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    position: relative;
+    list-style: none;
+}
+
+.manu:before{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: skyblue;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(-25px);
+    opacity: 0;
+}
+.manu:after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: skyblue;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(25px);
+    opacity: 0;
+}
+
+.manu:hover:before{
+    transform: translateY(0);
+    transition: 0.3s;
+    opacity: 1;
+}
+.manu:hover:after{
+    transform: translateY(0);
+    transition: 0.3s;
+    opacity: 1;
+}

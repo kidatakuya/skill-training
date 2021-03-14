@@ -1,0 +1,66 @@
+header {
+  padding: 8px;
+  background-color: purple;
+  margin-bottom: 80px;
+}
+
+header h1 {
+  margin: 0;
+  text-align: center;
+}
+
+main {
+  height: 100%;
+}
+
+main ul {
+  display: flex;
+  list-style: none;
+  width: 70%;
+  background-color: #a249fc;
+  transform: translateY(8px);
+  margin: 0 auto;
+}
+
+main ul .nav {
+  width: 20%;
+  padding: 8px 0 16px;
+  background-color: #a249fc;
+  color: #FFF;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+main .textbox {
+  padding: 24px;
+  width: 85%;
+  margin: 0 auto;
+  background-color: rebeccapurple;
+  border-radius: 5px;
+  position: relative;
+  z-index: 10;
+}
+
+main .textbox .text {
+  color: #FFF;
+  display: none;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer p {
+  width: 100%;
+  padding: 8px;
+  margin: 0;
+  background-color: purple;
+  text-align: center;
+  color: #FFF;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>jsで自動スクロール</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="navContent">HOME</li>
+            <li class="navContent">ABOUT</li>
+            <li class="navContent">MENU</li>
+            <li class="navContent">USE</li>
+            <li class="navContent">PF</li>
+        </ul>
+    </nav>
+    <main>
+        <div class="content h">
+            <h2>HOME</h2>
+        </div>
+        <div class="content a">
+            <h2>ABOUT</h2>
+            <div id="item"></div>
+        </div>
+        <div class="content m">
+            <h2>MENU</h2>
+        </div>
+        <div class="content u">
+            <h2>USE</h2>
+        </div>
+        <div class="content p">
+            <h2>PF</h2>
+        </div>
+    </main>
+
+    <script>
+
+        window.onload=()=>{
+            const menu = document.getElementsByClassName("navContent");
+            const box = document.getElementsByClassName("content");
+
+            const item = document.getElementById("item");
+            
+            window.onscroll=()=>{
+                let ys = window.pageYOffset;
+                item.style.transform="translateY(" +  ys / 3 + "px)";
+            }
+
+            for(let i=0;i<menu.length;i++){
+                menu[i].onclick=()=>{
+                    // スクロール
+                    box[i].scrollIntoView({behavior: "smooth"});
+
+                    // let clientRect = box[i].getBoundingClientRect() ;
+                    // let y = window.pageYOffset + clientRect.top ;
+
+                    // https://developer.mozilla.org/ja/docs/Web/API/Element/scrollIntoView
+                }
+            }
+
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header{
+    padding: 5px;
+    background-color: #007acc;
+}
+h1{
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    line-height: 0;
+}
+#m{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+   padding: 100px 0;
+   display: none;
+}
+#m p{
+    padding: 100px 200px;
+    font-size: 50px;
+    background-color: #007133;
+    display: inline-block;
+    margin: 0 auto;
+
+}
+#btn1{
+    margin-top: 50px;
+}
+
+.box_inner{
+    width: 550px;
+    height: 600px;
+    margin: 20px auto;
+    background-color: antiquewhite;
+    position: relative;
+    z-index: 5;
+}
+.box_inner_container1{
+    position: absolute;
+    top: 20px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+}
+.box_inner_container2{
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+}
+.logo2{
+    width: 100%;
+    /* height: 100px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    left: 0;
+    margin: 0 auto; */
+}
+.gauge{
+    width: 200px;
+    height: 20px;
+    border-left: #4a233b solid 10px;
+    border-right: #4a233b solid 10px;
+    border-top: #4a233b solid 2px;
+    border-bottom: #4a233b solid 2px;
+    margin: 0 auto;
+    position: absolute;
+    top: 130px;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+#g{
+    display: block;
+    width: 200px;
+    height: 20px;
+    background-color: chartreuse;
+    position: relative;
+    z-index: 30;
+    transition:  .3s;
+}
+.logo{
+    width: 100%;
+    height: 100%;
+}
+.sword{
+    height: 150px;
+    position: absolute;
+    top: -120px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    transform-origin: bottom;
+    transform: rotate3d(0,0,-30,50deg);
+   
+}
+.swordanimation{
+    animation: swordanimation 0.2s 1;
+}
+
+button{
+    padding: 50px 50px;
+    background-color: #000;
+    color: #fff;
+    font-size: 25px;
+    border-radius: 50%;
+
+}
+@keyframes swordanimation{
+    0%{
+        transform: rotate3d(0,0,-30,50deg);
+    }
+    40%{
+        transform: rotate3d(0,0,35,50deg);
+    }
+    100%{
+        transform: rotate3d(0,0,-30,50deg);
+    }
+}
+
+footer{
+    padding: 5px 0;
+    background-color: #fff000;
+    margin-top: 20px;
+}

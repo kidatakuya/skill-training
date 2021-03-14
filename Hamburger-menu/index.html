@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ハンバーガーメニュー</title>
+</head>
+<body>
+    <header>
+        <h1>ハンバーガーメニュー</h1>
+        <nav id="nav">
+            <div id="i"></div>
+        </nav>
+        <ul id="n">
+            <li>あああああああ</li>
+            <li>あああああああ</li>
+            <li>あああああああ</li>
+            <li>あああああああ</li>
+            <li>あああああああ</li>
+        </ul>
+    </header>
+    <main>
+
+        
+
+    </main>
+
+    
+<script>
+     let n=document.getElementById("n");
+     let nw=n.clientWidth;
+    n.style.transform="translateX(" + nw + "px)";
+    window.onload=function(){
+        let nav=document.getElementById("nav");
+        let i=document.getElementById("i")
+        // n.style.transform="translateX(" + nw + "px)";
+        nav.onclick=function(){
+            if(nav.classList.contains("nav")){
+                nav.classList.remove("nav");
+                i.style.opacity="1";
+                n.style.transform="translateX(" + nw + "px)";
+            }
+            else{
+                    nav.classList.add("nav");
+                    i.style.opacity="0";
+                    n.style.transform="translateX(0)" ;
+                }
+            
+        }
+    }
+
+
+   
+</script>
+</body>
+</html>

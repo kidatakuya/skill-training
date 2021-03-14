@@ -1,0 +1,59 @@
+@import "_ver";
+
+body{
+    margin: 0;
+}
+
+// scssでしか使えないアニメーションの関数化方法
+// @mixin anima(
+//     $name,
+//     $duration: 1s
+//     ) {
+//     animation-name: $name;
+//     animation-duration: $duration;
+// }
+
+header{
+    margin-bottom: 40px;
+    background-color: $accentsColor;
+    h1{
+        margin: 0;
+        padding: 10px 0;
+        text-align: center;
+        color: $fontColor;
+    }
+}
+
+main{
+    #box{
+        width: 800px;
+        height: 500px;
+        background-color: $mainColor;
+        overflow: scroll;
+        margin: 0 auto;
+        behavior: smooth;
+        .innerbox{
+            width: 80%;
+            height: 200px;
+            background-color: $subColor;
+            margin: 60px auto;
+            border-radius: 20px;
+            transition: 0.2s;
+            // transform: rotate();
+            // opacity: ;
+            
+        }
+    }
+}
+
+footer{
+    background-color: $mainColor;
+    margin-top: 40px;
+    p{
+        color: $fontColor;
+        padding: 5px;
+        font-size: 1.6rem;
+        text-align: center;
+        margin: 0;
+    }
+}

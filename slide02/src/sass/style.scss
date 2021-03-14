@@ -1,0 +1,55 @@
+@import "_ress";
+@import "_ver";
+
+body{
+    margin: 0;
+}
+
+// scssでしか使えないアニメーションの関数化方法
+// @mixin anima(
+//     $name,
+//     $duration: 1s
+//     ) {
+//     animation-name: $name;
+//     animation-duration: $duration;
+// }
+
+main{
+    .warp{
+        width: 100vw;
+        height: 100vh;
+        margin: 0 auto;
+        overflow: hidden;
+        // background-color: red;
+
+        #box{
+            width: 500vw;
+            height: 100vh;
+            display: flex;
+            // transition: 0.5s;
+            .boxinner{
+                width: 100vw;
+                height: 100vh;
+                list-style: none;
+
+                &:nth-child(1){
+                    background-color: red;
+                }
+                &:nth-child(2){
+                    background-color: green;
+                }
+                &:nth-child(3){
+                    background-color: yellow;
+                }
+                &:nth-child(4){
+                    background-color: blue;
+                }
+                &:nth-child(5){
+                    background-color: red;
+                    
+                }
+               
+            }
+        }
+    }
+}

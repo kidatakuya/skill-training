@@ -1,0 +1,123 @@
+header {
+  padding: 8px;
+  background-color: purple;
+  margin-bottom: 80px;
+}
+
+header h1 {
+  margin: 0;
+  text-align: center;
+}
+
+main {
+  height: 100%;
+}
+
+main .box {
+  max-width: 1000px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+main .box h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+main .box .ipt {
+  width: 100%;
+  height: 50px;
+  padding-left: 100px;
+  background-color: gainsboro;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+}
+
+main .box .ipt input {
+  width: 100%;
+  height: 100%;
+}
+
+main .box .ipt:nth-of-type(1)::before {
+  content: "NAME";
+  color: #000;
+  background-color: grey;
+  color: honeydew;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  height: 100%;
+  z-index: 20;
+}
+
+main .box .ipt:nth-of-type(2)::before {
+  content: "EMAIL";
+  color: #000;
+  background-color: grey;
+  color: honeydew;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  height: 100%;
+  z-index: 20;
+}
+
+main .box .ipt:nth-of-type(3)::before {
+  content: "MSG";
+  color: #000;
+  background-color: grey;
+  color: honeydew;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  height: 100%;
+  z-index: 20;
+}
+
+main .box .ipt:hover::before {
+  width: 90px;
+  transition: 0.4s;
+}
+
+main .box button {
+  display: block;
+  width: 120px;
+  height: 50px;
+  margin: 0 auto;
+  color: #FFF;
+  background-color: darkorange;
+}
+
+main .box button:hover {
+  background-color: grey;
+  transition: 0.4s;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer p {
+  width: 100%;
+  padding: 8px;
+  margin: 0;
+  background-color: purple;
+  text-align: center;
+  color: #FFF;
+}

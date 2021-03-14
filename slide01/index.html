@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ress.css">
+    <link rel="stylesheet" href="style.css">
+    <title>画像回転</title>
+</head>
+<body>
+    <header>
+        <h1>画像回転</h1>
+    </header>
+    <main>
+        <div>
+            <div id="img">
+                <div id="inner-img">
+                    <img src="img/img1.jpg" alt="" class="img img1" id="img1">
+                    <img src="img/img2.jpg" alt="" class="img img2" id="img2">
+                    <img src="img/img3.jpg" alt="" class="img img3" id="img3">
+                    <img src="img/img4.jpg" alt="" class="img img4" id="img4">
+                    <img src="img/img5.jpg" alt="" class="img img5" id="img5">
+                </div>
+            </div>
+        </div>
+
+        <div class="pointbox">
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+        </div>
+
+    </main>
+
+    
+<script>
+    
+    window.onload=function(){
+
+        var images=[
+            {
+                "path":"img/img1.jpg",
+                "id":"img1",
+                "class":"anime"
+            },
+            {
+                "path":"img/img2.jpg",
+                "id":"img2",
+                "class":"anime"
+            },
+            {
+                "path":"img/img3.jpg",
+                "id":"img3",
+                "class":"anime"
+            },
+            {
+                "path":"img/img4.jpg",
+                "id":"img4",
+                "class":"anime"
+            },
+            {
+                "path":"img/img5.jpg",
+                "id":"img5",
+                "class":"anime"
+            }
+        ]
+
+
+        var iimg=document.getElementById("img");
+        var iig=document.getElementById("inner-img");
+        let count=0;
+            intervalId=setInterval(
+            function(){
+                count=count + 1;
+                let imgs=document.getElementById("img" + count)
+                imgs.style.width="0"
+                imgs.addEventListener("transitionend",()=>{
+
+                    // 特定のIDを持つ要素消去
+                    iig.removeChild(imgs);
+                    
+                })
+                img=document.createElement("img");
+                // 画像作成
+                img.setAttribute("src",images[count - 1].path);
+                img.setAttribute("id",images[count - 1].id);
+                iig.appendChild(img);
+                if(count===5){
+                        count=0;
+                    }
+                
+            },
+        3000)
+    }
+</script>
+</body>
+</html>

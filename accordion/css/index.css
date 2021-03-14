@@ -1,0 +1,110 @@
+header {
+  padding: 8px;
+  background-color: purple;
+  margin-bottom: 80px;
+}
+
+header h1 {
+  margin: 0;
+  text-align: center;
+}
+
+main {
+  height: 100%;
+  margin: 200px 0;
+}
+
+main ul {
+  list-style: none;
+  width: 70%;
+  background-color: #a249fc;
+  transform: translateY(8px);
+  margin: 0 auto;
+}
+
+main ul .nav {
+  width: 100%;
+  padding: 16px;
+  background-color: #a249fc;
+  color: #FFF;
+  font-size: 16px;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+  transition: 0.3s;
+}
+
+main ul .nav:hover {
+  background-color: purple;
+  cursor: pointer;
+}
+
+main ul .nav .a {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  margin: auto 0;
+  z-index: 20;
+  transition: 0.5s;
+}
+
+main ul .nav .a::before {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: #FFF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 4px;
+}
+
+main ul .nav .a:after {
+  content: "";
+  width: 4px;
+  height: 100%;
+  background-color: #FFF;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 4px;
+}
+
+main .text {
+  height: 0;
+  overflow: hidden;
+  background-color: #FFF;
+  transition: 0.5s;
+}
+
+main .text .inner {
+  opacity: 0;
+}
+
+main .bottom {
+  width: 100%;
+  height: 16px;
+  background-color: purple;
+  border-top: grey 2px solid;
+  opacity: 1;
+}
+
+footer {
+  width: 100%;
+}
+
+footer p {
+  width: 100%;
+  padding: 8px;
+  margin: 0;
+  background-color: purple;
+  text-align: center;
+  color: #FFF;
+}

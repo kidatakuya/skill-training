@@ -1,0 +1,123 @@
+@import "_ress";
+@import "_ver";
+@import "_common";
+
+
+body{
+    background-color: #FFF;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    perspective: 600;
+}
+div{
+    transform-style: preserve-3d;
+}
+
+.sakura{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background-color: pink;
+    border-radius: 0% 100% 0% 100% / 0% 100% 0% 100% ;
+    transform: rotateZ(-45deg);
+    &::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: pink;
+    border-radius: 0% 100% 0% 100% / 0% 100% 0% 100% ;
+    transform-origin: 100% 100%;
+    transform: rotate(15deg);
+    }
+
+}
+.slide{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: slide 48s linear infinite;
+}
+.drop{
+    position: absolute;
+    top: -20vh;
+    left: -100vw;
+    animation: drop 10s linear infinite;
+    @for $i from 1 through 200{
+        &:nth-child(#{$i}){
+            left: random(100) + 0%;
+            animation-delay: random(9999) * -1ms;
+            animation-duration: random(5) + 3s;
+            .size{
+                transform: scale(random(5) * 0.5);
+            }
+            .slide{
+                animation-delay: random(9999) * -1ms;
+                animation-duration: random(8) + 5s;
+            }
+            .rotate{
+                animation-delay: random(9999) * -1ms;
+            }
+        }
+    }
+}
+
+.move{
+    animation: rotateZ 10s linear infinite;
+}
+// .stagger{
+//     transform: translateY(50px);
+// }
+.rotate{
+    animation: rotateY 2s linear infinite;
+}
+
+@keyframes rotateZ{
+    0%{
+        transform: rotateZ(0);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes rotateY{
+    0%{
+        transform: rotateZ(45deg) rotateX(0);
+    }
+    100%{
+        transform: rotateZ(45deg) rotateX(360deg);
+    }
+}
+
+@keyframes slide{
+    0%{
+        opacity: 0;
+        transform: translateX(0);
+    }
+    10%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(140vw);
+    }
+}
+
+@keyframes drop{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(150vh);
+    }
+}

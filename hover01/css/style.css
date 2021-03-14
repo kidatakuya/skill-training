@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    background-color: black;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+    width: 70%;
+    height: 50px;
+   
+}
+ul{
+    height: 100%;
+    display: flex;
+    list-style: none;
+}
+li{
+    width: 20%;
+    color: #FFF;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+}
+
+li:hover{
+    border-top:2px solid skyblue ;
+    transition: 0.2s;
+}
+/* li::before{
+    content: "";
+
+} */

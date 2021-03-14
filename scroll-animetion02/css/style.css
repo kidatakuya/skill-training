@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+}
+
+header {
+  margin-bottom: 40px;
+  background-color: #384b25;
+}
+
+header h1 {
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  color: #FFF;
+}
+
+main #box {
+  width: 800px;
+  height: 500px;
+  background-color: #282828;
+  overflow: scroll;
+  margin: 0 auto;
+  behavior: smooth;
+}
+
+main #box .innerbox {
+  width: 80%;
+  height: 200px;
+  background-color: #565656;
+  margin: 60px auto;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+
+footer {
+  background-color: #282828;
+  margin-top: 40px;
+}
+
+footer p {
+  color: #FFF;
+  padding: 5px;
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 0;
+}
