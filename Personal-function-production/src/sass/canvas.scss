@@ -1,0 +1,50 @@
+.nav{
+    width: 200px;
+    height: 100vh;
+    padding: 100px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba($color: #f0f0f0, $alpha: 1.0);
+    .nav-box{
+        list-style: none;
+        padding: 0 24px;
+        a{
+            text-decoration: none;
+            height: 40px;
+            line-height: 40px;
+            color: rgba($color: #202020, $alpha: 1.0);
+            li{
+                text-align: center;
+                border-bottom: #acacac solid 1px;
+                transition: 0.2s;
+                &:hover{
+                    background-color: rgba($color: #9aadff, $alpha: 1.0);
+                }
+            }
+            
+        }
+    }
+}
+
+#canvas {
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center;
+    background-color: #08233E;
+    // background-image: url('https://techracho.bpsinc.jp/wp-content/uploads/2017/12/snow_halation.jpg');
+    /*好きな背景を設定してください*/
+    min-height:300px;
+  }
+  
+  html,
+  body {
+    margin: 0;
+    overflow: hidden;
+  }
+
+
+.content{
+    padding-left: 200px;
+    // background-color: #000;
+}

@@ -1,0 +1,63 @@
+.nav{
+    width: 200px;
+    height: 100vh;
+    padding: 100px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba($color: #f0f0f0, $alpha: 1.0);
+    .nav-box{
+        list-style: none;
+        padding: 0 24px;
+        a{
+            text-decoration: none;
+            height: 40px;
+            line-height: 40px;
+            color: rgba($color: #202020, $alpha: 1.0);
+            li{
+                text-align: center;
+                border-bottom: #acacac solid 1px;
+                transition: 0.2s;
+                &:hover{
+                    background-color: rgba($color: #9aadff, $alpha: 1.0);
+                }
+            }
+            
+        }
+    }
+}
+.content{
+    padding-left: 200px;
+    .label-box {
+        /* box-sizing はプラグインで padding-top を付与したときに height を変えないようにするために付けています */
+        box-sizing: border-box;
+        height: 240px;
+        width: 320px;
+        /* 縦横中央揃え */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* グラフ上に配置 */
+        margin-top: -240px;
+      }
+      
+      /* タイトル、値 */
+      .label-box .label {
+        color: #636363;
+        text-align: center;
+      }
+      .label-box .label .title {
+        font-size: 20px;
+        letter-spacing: .05em;
+        margin-bottom: 3px;
+        padding-top: 13px;
+      }
+      .label-box .label .value {
+        font-size: 60px;
+        line-height: 1em;
+      }
+      .label-box .label .value .per {
+        font-size: 20px;
+      }
+
+}

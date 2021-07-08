@@ -1,0 +1,48 @@
+@charset "UTF-8";
+.nav {
+  width: 200px;
+  height: 100vh;
+  padding: 100px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #f0f0f0;
+}
+
+.nav .nav-box {
+  list-style: none;
+  padding: 0 24px;
+}
+
+.nav .nav-box a {
+  text-decoration: none;
+  height: 40px;
+  line-height: 40px;
+  color: #202020;
+}
+
+.nav .nav-box a li {
+  text-align: center;
+  border-bottom: #acacac solid 1px;
+  transition: 0.2s;
+}
+
+.nav .nav-box a li:hover {
+  background-color: #9aadff;
+}
+
+#canvas {
+  background-color: #08233E;
+  /*好きな背景を設定してください*/
+  min-height: 300px;
+}
+
+html,
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.content {
+  padding-left: 200px;
+}
